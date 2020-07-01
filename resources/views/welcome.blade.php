@@ -1,67 +1,27 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>HighPoint Interactive | Greater Houston Digital Agency</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link href="/css/bootstrap-grid.css" />
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 44px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
         </style>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-171081579-1"></script>
+            <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-171081579-1');
+            </script>
+
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -80,10 +40,41 @@
             @endif
 
             <div class="content">
+                <img src="img/highpointlogo.png" />
                 <div class="title m-b-md">
-                    HighPoint Interactive Coming Soon
+                    <span class="teal">High</span>Point Interactive 
                 </div>
-
+                <h3>Digital Marketing Services</h3>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3>Reach out for a consultation</h3>
+                        </div>
+                        <div class="col-md-7 offset-2">
+                                <form method="POST" action="/posts">
+                                    {{ csrf_field() }} <? //Must have for all forms ?>
+                                    <div class="form-group">
+                                        <label for="name">Name</label>
+                                        <input type="text" class="form-control" id="name" name="name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Phone</label>
+                                        <input type="text" class="form-control" id="phone" name="phone">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="text" class="form-control" id="email" name="email">
+                                    </div>
+                                
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-primary">Publish</button>
+                                    </div>
+                                        <!--this can be repeated for any and all forms (validation)-->
+                                        <?php //include ('layouts.errors') ?>
+                                    </form>
+                        </div>
+                    </div>
+                </div>
                 
             </div>
         </div>
