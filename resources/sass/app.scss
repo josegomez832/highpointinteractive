@@ -1,1 +1,102 @@
-//
+$fa-font-path:         "/webfonts" !default;
+@import "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+@import "node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+html, body{
+    font-family: 'Open Sans', sans-serif;
+    margin:0;
+    padding:0;
+}
+h1, h2, h3, h4, h5{    
+    font-family: 'Roboto', sans-serif;
+}
+.hero{
+    background-image:url(/img/home-hero.jpg);
+    background-size:cover;
+    background-position:center center;
+    min-height:585px;
+    // position:absolute;
+    // width:100%;
+    // top:0;
+    h1{
+        font-size:68px;
+        line-height:60px;
+        color:#fff;
+        span{
+            color:#27B390;
+        }
+    }
+}
+.services{
+    background:url(/img/zigzag.png) #292929;
+    padding-top:35px;
+    padding-bottom:35px;
+    h2{
+        font-size:46px;
+        color:#fff;
+        text-transform:uppercase;
+        span{
+            color:#27B390;
+        }
+    }
+    .panel-content{
+        text-align:center;
+    }
+    .card{
+        
+        color:#fff;
+        min-height:280px;
+        .cardfront{
+            transition:1s;
+            text-align:center;
+            .fas{
+                font-size:50px;
+            }
+            h3{
+                font-size:18px;
+            }
+        }
+    }
+    
+    .cardback{
+        background:#1b1b1b;
+        color:#fff;
+        box-shadow: 10px 11px 0px 0px #27B390;
+        padding: 28px 20px;
+        // display: none;
+        transition:1s;
+        .fas{
+            font-size:36px;
+            color:#27B390;
+            transition:1s;
+        }
+        p{
+            font-size:14px;
+            line-height:22px;
+        }
+        p.card-title{
+            text-transform:uppercase;
+            font-family: 'Roboto', sans-serif;
+            font-size: 24px;
+            line-height: 24px;
+            margin: 0;
+        }
+    }
+}
+.card:hover .cardfront{
+    display:none;
+}
+.card:hover .cardback{
+    // display:block;
+    background:#27B390;
+        color:#1b1b1b;
+        box-shadow: 10px 11px 0px 0px #1b1b1b;
+}
+.card:hover .cardback .fas{
+    color:#fff;
+}
+.about{
+    background:#f3f1f1;
+    padding-top:45px;
+    padding-bottom:45px;
+}

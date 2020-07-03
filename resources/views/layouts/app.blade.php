@@ -5,11 +5,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>HighPoint Interactive | Greater Houston Digital Agency</title>
+        <title>HighPoint Interactive - @yield('title')</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <link href="/css/bootstrap-grid.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@900&display=swap" rel="stylesheet">
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/bootstrap-grid.css') }}" rel="stylesheet">
 
         </style>
         <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -26,7 +27,8 @@
     <body>
 
     <div class="page-wrapper">
+        <img src="img/highpointlogo.png" />
             @yield('content')
-        </div>
+        </div><!--/page-wrapper-->
     </body>
 </html>
