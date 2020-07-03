@@ -3,12 +3,32 @@ $fa-font-path:         "/webfonts" !default;
 @import "node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
 @import "node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
 html, body{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin:0;
     padding:0;
+    -webkit-tap-highlight-color: #28b390;
+}
+p{
+    font-size:16px;
+    line-height:26px;
 }
 h1, h2, h3, h4, h5{    
     font-family: 'Roboto', sans-serif;
+    text-transform:uppercase
+}
+h3{
+    font-size:26px;
+    line-height:30px;
+}
+h4{
+
+}
+.header {
+    position: absolute;
+    width: 100%;
+    img{
+        width:120px;
+    }
 }
 .hero{
     background-image:url(/img/home-hero.jpg);
@@ -27,17 +47,30 @@ h1, h2, h3, h4, h5{
         }
     }
 }
+@media(min-width:1336px){
+    .hero{
+        min-height:780px;
+    }
+}
 .services{
     background:url(/img/zigzag.png) #292929;
-    padding-top:35px;
-    padding-bottom:35px;
+    padding-top:95px;
+    padding-bottom:95px;
     h2{
         font-size:46px;
         color:#fff;
         text-transform:uppercase;
+        margin:0;
         span{
             color:#27B390;
         }
+    }
+    p.blurb{
+        font-size:22px;
+        line-height:26px;
+        color:#fff;
+        margin-bottom:25px;
+        margin-top:0px;
     }
     .panel-content{
         text-align:center;
@@ -45,7 +78,7 @@ h1, h2, h3, h4, h5{
     .card{
         
         color:#fff;
-        min-height:280px;
+        
         .cardfront{
             transition:1s;
             text-align:center;
@@ -65,14 +98,20 @@ h1, h2, h3, h4, h5{
         padding: 28px 20px;
         // display: none;
         transition:1s;
+        min-height:375px;
+        .card-intro{
+            text-align:center;
+        }
         .fas{
             font-size:36px;
             color:#27B390;
             transition:1s;
+            margin-bottom:25px;
         }
         p{
             font-size:14px;
             line-height:22px;
+            margin-bottom:0px;
         }
         p.card-title{
             text-transform:uppercase;
@@ -82,6 +121,9 @@ h1, h2, h3, h4, h5{
             margin: 0;
         }
     }
+}
+.thankyou .panel-content{
+    text-align:left;
 }
 .card:hover .cardfront{
     display:none;
@@ -97,6 +139,107 @@ h1, h2, h3, h4, h5{
 }
 .about{
     background:#f3f1f1;
-    padding-top:45px;
-    padding-bottom:45px;
+    padding-top:95px;
+    padding-bottom:95px;
+    h3{
+        color:#2e2e2e;
+    }
+    ul.list{
+        list-style-type: none;
+        li{
+            margin-bottom:18px;
+        }
+        li::before{
+            content:"\f00c";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            color: #27B390;
+            padding: 0px 8px;
+        }
+    }
+}
+.contact{
+    background:url(/img/contact-us-bg.jpg) no-repeat center center;
+    background-size:cover;
+    padding-top:95px;
+    padding-bottom:95px;
+    text-align:center;
+    color:#fff;
+    h3{
+        color:#fff;
+    }
+    .form-field{
+        position:relative;
+        margin-bottom:20px;
+        label.fixed{
+            position:absolute;
+            font-size:13px;
+            font-family: 'Open Sans', sans-serif;
+            color:#a0aeb9;
+           line-height:35px;
+           left:25px;
+           padding-right: 6px;
+            border-right: 1px solid #dfe5e8;
+        }
+        .required{
+            color:#f34848;
+            padding-left:2px;
+        }
+        input, textarea{
+            width: 100%;
+            border: 1px solid #dfe5e8;
+            padding: 4px 4px 4px 68px;
+            border-radius: 3px;
+            min-height: 35px;
+            font-family: 'Open Sans', sans-serif;
+            color:#a0aeb9;
+        }
+        textarea{
+            min-height:250px;
+            padding:5px;
+        }
+        button{
+            display:block;
+            width:100%;
+            border:1px solid #1b1b1b;
+            background:#1b1b1b;
+            color:#fff;
+            padding:5px;
+            transition:1s;
+            cursor:pointer;
+            :hover{
+                background:#141414;
+            }
+        }
+
+    }
+}
+@media(max-width:991px){
+    .cardback{
+        margin-bottom:50px;
+    }
+}
+@media(max-width:667px){
+    .header img {
+        width: 120px;
+        margin: 20px auto;
+    }
+    .services h2{
+        font-size:40px;
+    }
+    .offset-3{
+        margin-left:0!important;
+    }
+    .about img{
+        width: 100%;
+        max-width: 300PX;
+        margin: 0 auto;
+        display: block;
+    }
+    .services img{
+        width:100%;
+    }
+    .services .cardback {
+        min-height: 100%;
+    }
 }

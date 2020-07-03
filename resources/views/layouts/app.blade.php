@@ -8,7 +8,7 @@
         <title>HighPoint Interactive - @yield('title')</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@900&display=swap" rel="stylesheet">
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link href="{{ asset('css/bootstrap-grid.css') }}" rel="stylesheet">
 
@@ -27,7 +27,7 @@
     <body>
 
     <div class="page-wrapper">
-        <img src="img/highpointlogo.png" />
+       
             @yield('content')
         </div><!--/page-wrapper-->
     </body>

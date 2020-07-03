@@ -6084,9 +6084,15 @@ readers do not read off random characters that represent icons */
 
 html,
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
+  -webkit-tap-highlight-color: #28b390;
+}
+
+p {
+  font-size: 16px;
+  line-height: 26px;
 }
 
 h1,
@@ -6095,6 +6101,21 @@ h3,
 h4,
 h5 {
   font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 26px;
+  line-height: 30px;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+}
+
+.header img {
+  width: 120px;
 }
 
 .hero {
@@ -6114,20 +6135,35 @@ h5 {
   color: #27B390;
 }
 
+@media (min-width: 1336px) {
+  .hero {
+    min-height: 780px;
+  }
+}
+
 .services {
   background: url(/img/zigzag.png) #292929;
-  padding-top: 35px;
-  padding-bottom: 35px;
+  padding-top: 95px;
+  padding-bottom: 95px;
 }
 
 .services h2 {
   font-size: 46px;
   color: #fff;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .services h2 span {
   color: #27B390;
+}
+
+.services p.blurb {
+  font-size: 22px;
+  line-height: 26px;
+  color: #fff;
+  margin-bottom: 25px;
+  margin-top: 0px;
 }
 
 .services .panel-content {
@@ -6136,7 +6172,6 @@ h5 {
 
 .services .card {
   color: #fff;
-  min-height: 280px;
 }
 
 .services .card .cardfront {
@@ -6158,17 +6193,24 @@ h5 {
   box-shadow: 10px 11px 0px 0px #27B390;
   padding: 28px 20px;
   transition: 1s;
+  min-height: 375px;
+}
+
+.services .cardback .card-intro {
+  text-align: center;
 }
 
 .services .cardback .fas {
   font-size: 36px;
   color: #27B390;
   transition: 1s;
+  margin-bottom: 25px;
 }
 
 .services .cardback p {
   font-size: 14px;
   line-height: 22px;
+  margin-bottom: 0px;
 }
 
 .services .cardback p.card-title {
@@ -6177,6 +6219,10 @@ h5 {
   font-size: 24px;
   line-height: 24px;
   margin: 0;
+}
+
+.thankyou .panel-content {
+  text-align: left;
 }
 
 .card:hover .cardfront {
@@ -6195,7 +6241,128 @@ h5 {
 
 .about {
   background: #f3f1f1;
-  padding-top: 45px;
-  padding-bottom: 45px;
+  padding-top: 95px;
+  padding-bottom: 95px;
+}
+
+.about h3 {
+  color: #2e2e2e;
+}
+
+.about ul.list {
+  list-style-type: none;
+}
+
+.about ul.list li {
+  margin-bottom: 18px;
+}
+
+.about ul.list li::before {
+  content: "\F00C";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #27B390;
+  padding: 0px 8px;
+}
+
+.contact {
+  background: url(/img/contact-us-bg.jpg) no-repeat center center;
+  background-size: cover;
+  padding-top: 95px;
+  padding-bottom: 95px;
+  text-align: center;
+  color: #fff;
+}
+
+.contact h3 {
+  color: #fff;
+}
+
+.contact .form-field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.contact .form-field label.fixed {
+  position: absolute;
+  font-size: 13px;
+  font-family: "Open Sans", sans-serif;
+  color: #a0aeb9;
+  line-height: 35px;
+  left: 25px;
+  padding-right: 6px;
+  border-right: 1px solid #dfe5e8;
+}
+
+.contact .form-field .required {
+  color: #f34848;
+  padding-left: 2px;
+}
+
+.contact .form-field input,
+.contact .form-field textarea {
+  width: 100%;
+  border: 1px solid #dfe5e8;
+  padding: 4px 4px 4px 68px;
+  border-radius: 3px;
+  min-height: 35px;
+  font-family: "Open Sans", sans-serif;
+  color: #a0aeb9;
+}
+
+.contact .form-field textarea {
+  min-height: 250px;
+  padding: 5px;
+}
+
+.contact .form-field button {
+  display: block;
+  width: 100%;
+  border: 1px solid #1b1b1b;
+  background: #1b1b1b;
+  color: #fff;
+  padding: 5px;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.contact .form-field button :hover {
+  background: #141414;
+}
+
+@media (max-width: 991px) {
+  .cardback {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 667px) {
+  .header img {
+    width: 120px;
+    margin: 20px auto;
+  }
+
+  .services h2 {
+    font-size: 40px;
+  }
+
+  .offset-3 {
+    margin-left: 0 !important;
+  }
+
+  .about img {
+    width: 100%;
+    max-width: 300PX;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .services img {
+    width: 100%;
+  }
+
+  .services .cardback {
+    min-height: 100%;
+  }
 }
 
